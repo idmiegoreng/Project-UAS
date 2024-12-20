@@ -22,7 +22,6 @@ class Transaction {
     required this.weekNumber,
   });
 
-  // Convert Transaction to Map for storage
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -35,7 +34,6 @@ class Transaction {
     };
   }
 
-  // Create Transaction from Map (for storage retrieval)
   factory Transaction.fromMap(Map<String, dynamic> map) {
     return Transaction(
       id: map['id'],
@@ -51,7 +49,6 @@ class Transaction {
     );
   }
 
-  // Create a copy of Transaction with modified fields
   Transaction copyWith({
     String? id,
     double? amount,
@@ -78,7 +75,6 @@ class Transaction {
   }
 }
 
-// List of predefined categories
 class TransactionCategories {
   static const List<String> expenseCategories = [
     'Makanan',

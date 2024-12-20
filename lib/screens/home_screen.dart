@@ -144,7 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Home Screen Widget with enhanced UI
   Widget _buildHomeScreen() {
     return currentWeek == null
         ? Center(
@@ -290,7 +289,6 @@ class _HomeScreenState extends State<HomeScreen> {
           );
   }
 
-  // Transactions Screen Widget
   Widget _buildTransactionsScreen() {
     return currentWeek == null
         ? const Center(child: Text('Belum ada transaksi'))
@@ -386,7 +384,6 @@ class _HomeScreenState extends State<HomeScreen> {
           );
   }
 
-  // Statistics Screen Widget
   Widget _buildStatisticsScreen() {
     if (currentWeek == null || currentWeek!.transactions.isEmpty) {
       return Center(
@@ -457,7 +454,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Helper methods for statistics
   Map<String, double> _getCategoryTotals() {
     final Map<String, double> totals = {};
     for (var transaction in currentWeek!.transactions) {

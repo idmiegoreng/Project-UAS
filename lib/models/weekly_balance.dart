@@ -13,7 +13,6 @@ class WeeklyBalance {
     List<Transaction>? transactions,
   }) : transactions = transactions ?? [];
 
-  // Calculate current balance by subtracting expenses
   double get currentBalance {
     double balance = initialBalance;
     for (var transaction in transactions) {
@@ -24,12 +23,10 @@ class WeeklyBalance {
     return balance;
   }
 
-  // Calculate total expenses for the week
   double get totalExpenses {
     return transactions.fold(0.0, (sum, transaction) => sum + transaction.amount);
   }
 
-  // Get formatted date range for the week
   String get weekLabel {
     final endDate = startDate.add(const Duration(days: 6));
     final startFormatted = '${startDate.day}/${startDate.month}';
@@ -37,7 +34,6 @@ class WeeklyBalance {
     return '$startFormatted - $endFormatted';
   }
 
-  // Create a copy of WeeklyBalance with modified fields
   WeeklyBalance copyWith({
     int? weekNumber,
     double? initialBalance,

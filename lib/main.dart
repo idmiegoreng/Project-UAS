@@ -4,7 +4,6 @@ import 'screens/home_screen.dart';
 import 'theme/app_theme.dart';
 import 'models/weekly_balance.dart';
 
-// State management class
 class AppState extends ChangeNotifier {
   List<WeeklyBalance> weeklyBalances = [];
   WeeklyBalance? currentWeek;
@@ -29,7 +28,6 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Initialize with default data
   void initializeData() {
     if (weeklyBalances.isEmpty) {
       startNewWeek(500000); 
